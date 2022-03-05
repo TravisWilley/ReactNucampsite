@@ -25,5 +25,6 @@ class App extends Component {
     );
   }
 }
+console.log('YO111');
 
 export default App;
