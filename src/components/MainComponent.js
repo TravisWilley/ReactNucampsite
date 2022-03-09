@@ -3,7 +3,7 @@ import {Navbar, NavbarBrand} from 'reactstrap';
 import Directory from './DirectoryComponent';
 import CampsiteInfo from './CampsiteInfoComponent';
 import {CAMPSITES} from '../shared/campsites';
-
+​
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -12,11 +12,11 @@ class Main extends Component {
       selectedCampsite: null,
     };
   }
-
+​
   onCampsiteSelect(campsiteId) {
     this.setState({selectedCampsite: campsiteId});
   }
-
+​
   render() {
     return (
       <div>
@@ -38,5 +38,5 @@ class Main extends Component {
     );
   }
 }
-
+​
 export default Main;
