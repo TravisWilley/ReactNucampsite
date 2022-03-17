@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {
+  Nav,
   Navbar,
   NavbarBrand,
-  Nav,
   NavbarToggler,
   Collapse,
   NavItem,
@@ -17,7 +17,6 @@ import {
   Label,
 } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -30,19 +29,16 @@ class Header extends Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }
-
   toggleNav() {
     this.setState({
       isNavOpen: !this.state.isNavOpen,
     });
   }
-
   toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
     });
   }
-
   handleLogin(event) {
     alert(
       `Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`
@@ -63,11 +59,10 @@ class Header extends Component {
             </div>
           </div>
         </Jumbotron>
-
         <Navbar dark sticky="top" expand="md">
           <div className="container">
             <NavbarBrand className="mr-auto" href="/">
-              <img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp Logo" />
+              <img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp logo" />
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
@@ -95,13 +90,13 @@ class Header extends Component {
               </Nav>
               <span className="navbar-text ml-auto">
                 <Button outline onClick={this.toggleModal}>
-                  <i className="fa fa-sign-in fa-lg" /> Login
+                  <i className="fa fa-sign-in fa-lg" />
+                  Login
                 </Button>
               </span>
             </Collapse>
           </div>
         </Navbar>
-
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
@@ -128,7 +123,7 @@ class Header extends Component {
                 <Label check>
                   <Input
                     type="checkbox"
-                    name="remember"
+                    name="checkbox"
                     innerRef={input => (this.remember = input)}
                   />
                   Remember Me
@@ -144,5 +139,4 @@ class Header extends Component {
     );
   }
 }
-
 export default Header;
