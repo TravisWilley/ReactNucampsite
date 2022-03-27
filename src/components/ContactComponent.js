@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-pascal-case */
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Breadcrumb, BreadcrumbItem, Button, Label, Col, Row} from 'reactstrap';
